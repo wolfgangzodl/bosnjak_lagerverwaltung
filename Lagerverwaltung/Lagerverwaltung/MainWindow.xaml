@@ -1,0 +1,15 @@
+﻿<Window x:Class="Lagerverwaltung.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lagerverwaltung"
+        mc:Ignorable="d"
+        Title="Bosnjak Lagerverwaltung" Height="473.647" Width="666.595">
+    <Grid>
+        <Image x:Name="logo_png" Margin="10,355,436,10" Source="logo.png" Stretch="Fill"/>
+        <Label x:Name="label" Content="Auftragsnummer" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Auftragsnummer" HorizontalAlignment="Left" Height="23" Margin="134,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" AcceptsReturn="True"/>
+
+    </Grid>
+</Window>
