@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace Lagerverwaltung
 {
@@ -22,14 +23,12 @@ namespace Lagerverwaltung
     {
          public MainWindow()
          {
-             InitializeComponent();
-         }
+            int cnt = 000001;
 
-        private void TextBox_SelectionChanged(object sender, RoutedEventArgs e)
-        {
+            InitializeComponent();
             DateTime today = DateTime.Now;
-            TextBox textBox = sender as TextBox;
-            //Auftragsnummer.Text = today
+            Auftragsnummer.Content = today.Year.ToString() + cnt.ToString();
+        }
 
     }
 }

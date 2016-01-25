@@ -8,8 +8,8 @@
         Title="Bosnjak Lagerverwaltung" Height="473.647" Width="666.595">
     <Grid>
         <Image x:Name="logo_png" Margin="10,355,436,10" Source="logo.png" Stretch="Fill"/>
-        <Label x:Name="label" Content="Auftragsnummer" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="Auftragsnummer" HorizontalAlignment="Left" Height="23" Margin="134,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" AcceptsReturn="True"/>
+        <Label x:Name="label" Content="Auftragsnummertext" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Auftragsnummer" Content="" HorizontalAlignment="Left" Margin="145,10,0,0" VerticalAlignment="Top" Width="78"/>
 
     </Grid>
 </Window>
