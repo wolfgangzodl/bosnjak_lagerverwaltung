@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Lagerverwaltung
 {
@@ -21,14 +23,36 @@ namespace Lagerverwaltung
     /// </summary>
     public partial class MainWindow : Window
     {
-         public MainWindow()
-         {
-            int cnt = 000001;
+        public MainWindow()
+        {
+            // BosnjakEntities bj = new BosnjakEntities();
+            SqlConnection con = new SqlConnection();
+            SqlDataAdapter ad = new SqlDataAdapter();
+            SqlCommand cmd = new SqlCommand();
+            String str = "select Jahr, AuftragNummer, Bauvorhaben.UnternehmenName, Bauvorhaben.Art,Bauvorhaben.PLZ, Bauvorhaben.Ort, Bauvorhaben.Strasse, Auftraggeber.AuftraggeberName, Auftraggeber.PLZ, Auftraggeber.Ort, Auftraggeber.Strasse from Auftrag" + 
+            "where (select BauvorhabenNr from Bauvorhaben) = Auftrag.BauvorhabenNr and (select AuftraggeberNr from Auftraggeber) = Auftrag.AuftraggeberNr";
 
-            InitializeComponent();
-            DateTime today = DateTime.Now;
-            Auftragsnummer.Content = today.Year.ToString() + cnt.ToString();
+            //String str = "select Jahr, Auftragnummer from Auftrag;";
+            cmd.CommandText = str;
+            ad.SelectCommand = cmd;
+            con.ConnectionString = "user id = sa; password = red.bull1610; Server = WOLFGANGZODAC27\\SQLEXPRESS; database = Bosnjak;";
+            cmd.Connection = con;
+            DataSet ds = new DataSet();
+            ad.Fill(ds);
+            listView.DataContext = ds.Tables[0].DefaultView;
+            con.Close();
         }
+
+       
+
+       
+
+
+        private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
 
     }
 }

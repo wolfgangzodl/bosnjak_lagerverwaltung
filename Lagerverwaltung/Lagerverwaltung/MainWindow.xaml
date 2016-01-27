@@ -5,11 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lagerverwaltung"
         mc:Ignorable="d"
-        Title="Bosnjak Lagerverwaltung" Height="473.647" Width="666.595">
-    <Grid>
-        <Image x:Name="logo_png" Margin="10,355,436,10" Source="logo.png" Stretch="Fill"/>
-        <Label x:Name="label" Content="Auftragsnummertext" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        Title="Bosnjak Lagerverwaltung" Height="473.647" Width="810.475">
+    <Grid Margin="0,0,2,2">
+        <Image x:Name="logo_png" Margin="10,361,610,10" Source="logo.png" Stretch="Fill"/>
         <Label x:Name="Auftragsnummer" Content="" HorizontalAlignment="Left" Margin="145,10,0,0" VerticalAlignment="Top" Width="78"/>
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="310" Margin="10,10,0,0" VerticalAlignment="Top" Width="747" SelectionChanged="listView_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Jahr" DisplayMemberBinding="{Binding Path=Jahr}"/>
+                    <GridViewColumn Header="Auftragnummer" DisplayMemberBinding="{Binding Path=Auftragnummer}"/>
+                    <GridViewColumn Header="PL" DisplayMemberBinding="{Binding Path=PL}"/>
+                    <GridViewColumn Header="BUnternehmenName" DisplayMemberBinding="{Binding Path=UnternehmenName}"/>
+                    <GridViewColumn Header="Art" DisplayMemberBinding="{Binding Path=Art}"/>
+                    <GridViewColumn Header="BPLZ" DisplayMemberBinding="{Binding Path=BPLZ}"/>
+                    <GridViewColumn Header="BOrt" DisplayMemberBinding="{Binding Path=BOrt}"/>
+                    <GridViewColumn Header="BStrasse" DisplayMemberBinding="{Binding Path=BStrasse}"/>
+                    <GridViewColumn Header="AuftraggeberName" DisplayMemberBinding="{Binding Path=AuftraggeberName}"/>
+                    <GridViewColumn Header="AOrt" DisplayMemberBinding="{Binding Path=AOrt}"/>
+                    <GridViewColumn Header="AStrasse" DisplayMemberBinding="{Binding Path=AStrasse}"/>
+                    <GridViewColumn Header="Arbeitsart" DisplayMemberBinding="{Binding Path=Arbeitsart}"/>
+                    <GridViewColumn Header="SR" DisplayMemberBinding="{Binding Path=SR}"/>
+                    <GridViewColumn Header="SZ" DisplayMemberBinding="{Binding Path=SZ}"/>
+                    <GridViewColumn Header="NK" DisplayMemberBinding="{Binding Path=NK}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ScrollBar x:Name="scrollBar" HorizontalAlignment="Left" Margin="757,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.024,0.485"/>
 
     </Grid>
 </Window>
