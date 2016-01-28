@@ -22,6 +22,11 @@ namespace Lagerverwaltung
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        SqlConnection conn;
+        SqlDataAdapter da;
+        DataTable dt;
+        SqlCommandBuilder cmdbl;
         public MainWindow()
         {
             InitializeComponent();
@@ -40,6 +45,20 @@ namespace Lagerverwaltung
             DataTable dt = new DataTable("Auftrag");
             da.Fill(dt);
             g1.ItemsSource = dt.DefaultView;
+        }
+
+        private void AuftragAendern_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                cmdbl = new SqlCommandBuilder(da);
+                da.Update(dt);
+                MessageBox.Show("Information updated", "Update", MessageBoxButton.OK);
+
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK);
+            }
         }
     }
 }
