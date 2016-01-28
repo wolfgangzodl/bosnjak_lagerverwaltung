@@ -27,6 +27,7 @@ namespace Lagerverwaltung
         SqlDataAdapter da;
         DataTable dt;
         SqlCommandBuilder cmdbl;
+        SqlCommand cmd;
         public MainWindow()
         {
             InitializeComponent();
@@ -60,5 +61,37 @@ namespace Lagerverwaltung
                 MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK);
             }
         }
+
+        private void AuftragHinzufuegen_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Wollen Sie diesen Auftrag bearbeiten bzw. löschen?", "Sind Sie sich sicher?", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                conn.ConnectionString = "Server = WOLFGANGZODAC27\\SQLExpress; Database = Bosnjak; user id = sa; password = red.bull1610";
+                cmd.CommandText = "Select * from [auftrag]";
+                da = new SqlDataAdapter(cmd);
+                try
+                {
+                    conn.Open();
+                    SqlCommandBuilder builder = new SqlCommandBuilder(da);
+                    da.UpdateCommand = builder.GetUpdateCommand();
+                    da.Update(dt);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex + "Keine Datenbankverbindung");
+                }
+                finally
+                {
+                    conn.Close();
+                    
+                }
+
+            }
+            
+
+        }
     }
+
+
 }

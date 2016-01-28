@@ -29,6 +29,8 @@
             </DataGrid.Columns>
         </DataGrid>
         <Image x:Name="Bildschirmfoto_2016_01_25_um_18_04_11_png" Margin="2,275,336,-79" Source="Bildschirmfoto 2016-01-25 um 18.04.11.png" Stretch="Fill"/>
+
         <Button x:Name="AuftragAendern" Content="Auftrag ändern" HorizontalAlignment="Left" Height="47" Margin="422,290,0,-63" VerticalAlignment="Top" Width="124" Click="AuftragAendern_Click"/>
+        <Button x:Name="AuftragHinzufuegen" Content="Auftrag hinzufügen" HorizontalAlignment="Left" Height="47" Margin="273,290,0,-63" VerticalAlignment="Top" Width="124" Click="AuftragHinzufuegen_Click"/>
     </Grid>
 </Window>
