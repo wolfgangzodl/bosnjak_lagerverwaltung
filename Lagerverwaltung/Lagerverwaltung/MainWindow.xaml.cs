@@ -37,7 +37,7 @@ namespace Lagerverwaltung
         private void bindingdatagrid()
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server = WOLFGANGZODAC27\\SQLExpress; Database = Bosnjak; user id = sa; password = red.bull1610";
+            conn.ConnectionString = "Server = WOLFGANGZODAC27\\SQLExpress; Database = Bosnjak; user id = bosnjak_dev; password = developer";
             conn.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "Select * from [auftrag]";
