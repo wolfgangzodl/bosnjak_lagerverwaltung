@@ -16,7 +16,7 @@
                     <TranslateTransform X="1.074"/>
                 </TransformGroup>
             </DataGrid.RenderTransform>
-            <DataGrid.Columns>
+            <!--<DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding AuftragNummer}" Header="Auftragnummer"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding PL}" Header="PL"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding BauvorhabenNr}" Header="Bauvorhabennummer"></DataGridTextColumn>
@@ -24,9 +24,10 @@
                 <DataGridTextColumn Binding="{Binding Arbeitsart}" Header="Arbeitsart"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding ErstellungsDatum}" Header="ErstellungsDatum"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding AuftragssummeNetto}" Header="AuftragssummeNetto"></DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding Zahlungsbedingung}" Header="Zahlungsbedingung"></DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding Abgeschlossen}" Header="Abegschlossen"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Zahlungsbedingungen}" Header="Zahlungsbedingungen"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Abgeschlossen}" Header="Abgeschlossen"></DataGridTextColumn>
             </DataGrid.Columns>
+            -->
         </DataGrid>
         <Image x:Name="Bildschirmfoto_2016_01_25_um_18_04_11_png" Margin="4,290,783,-55" Source="Bildschirmfoto 2016-01-25 um 18.04.11.png" Stretch="Uniform"/>
 

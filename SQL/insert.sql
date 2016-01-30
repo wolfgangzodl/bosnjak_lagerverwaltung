@@ -1,9 +1,6 @@
 use Bosnjak;
 
-drop table AuftragUebersicht;
-drop table auftrag;
-drop table Auftraggeber;
-drop table Bauvorhaben;
+
 
 insert into Bauvorhaben values (1, 'Fit Fabrik', 'Wassereintritt', '1220', 'Wien', 'Gewerbeparkstrasse 3', 'Dies ist eine Bemerkung');
 insert into Bauvorhaben values (2, 'Austrothem', 'Brandschutzkonzept Produktionshalle', '7083', 'Purbach am Neusiedler See', 'Industriestraﬂe 1','Dies ist eine Bemerkung');
@@ -28,3 +25,8 @@ insert into AuftragUebersicht values (1,2, 2000, getdate(), 8000);
 insert into AuftragUebersicht values (1,3, 2000, getdate(), 8000);
 insert into AuftragUebersicht values (2,1, 2000, getdate(), 8000);
 insert into AuftragUebersicht values (3,1, 2000, getdate(), 8000);
+
+
+select * from Bauvorhaben;
+select * from Auftraggeber;
+select * from Auftrag;
