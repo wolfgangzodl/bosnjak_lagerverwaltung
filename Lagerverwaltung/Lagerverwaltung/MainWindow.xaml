@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lagerverwaltung"
         mc:Ignorable="d"
-        Title="Bosnjak Lagerverwaltung" Height="383.488" Width="576.852">
+        Title="Bosnjak Lagerverwaltung" Height="390.59" Width="871.57">
     <Grid Margin="0,0,2,78">
-        <DataGrid AlternatingRowBackground="LightGray" Name="g1" AutoGenerateColumns="False" RenderTransformOrigin="0.5,0.5">
+        <DataGrid AlternatingRowBackground="LightGray" Name="g1" AutoGenerateColumns="True" RenderTransformOrigin="0.5,0.5">
             <DataGrid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -17,20 +17,21 @@
                 </TransformGroup>
             </DataGrid.RenderTransform>
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Jahr}" Header="Jahr"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding AuftragNummer}" Header="Auftragnummer"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding PL}" Header="PL"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding BauvorhabenNr}" Header="Bauvorhabennummer"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding AuftraggeberNr}" Header="Auftraggebernummer"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding Arbeitsart}" Header="Arbeitsart"></DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding SR}" Header="SR"></DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding SZ}" Header="SZ"></DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding NK}" Header="NK"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding ErstellungsDatum}" Header="ErstellungsDatum"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding AuftragssummeNetto}" Header="AuftragssummeNetto"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Zahlungsbedingung}" Header="Zahlungsbedingung"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Abgeschlossen}" Header="Abegschlossen"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Image x:Name="Bildschirmfoto_2016_01_25_um_18_04_11_png" Margin="2,275,336,-79" Source="Bildschirmfoto 2016-01-25 um 18.04.11.png" Stretch="Fill"/>
+        <Image x:Name="Bildschirmfoto_2016_01_25_um_18_04_11_png" Margin="4,290,783,-55" Source="Bildschirmfoto 2016-01-25 um 18.04.11.png" Stretch="Uniform"/>
 
-        <Button x:Name="AuftragAendern" Content="Auftrag ändern" HorizontalAlignment="Left" Height="47" Margin="422,290,0,-63" VerticalAlignment="Top" Width="124" Click="AuftragAendern_Click"/>
-        <Button x:Name="AuftragHinzufuegen" Content="Auftrag hinzufügen" HorizontalAlignment="Left" Height="47" Margin="273,290,0,-63" VerticalAlignment="Top" Width="124" Click="AuftragHinzufuegen_Click"/>
+        <Button x:Name="AuftragAendern" Content="Auftrag ändern" HorizontalAlignment="Left" Height="47" Margin="703,290,0,-55" VerticalAlignment="Top" Width="124" Click="AuftragAendern_Click"/>
+        <Button x:Name="AuftragHinzufuegen" Content="Auftrag hinzufügen" HorizontalAlignment="Left" Height="47" Margin="538,290,0,-55" VerticalAlignment="Top" Width="124" Click="AuftragHinzufuegen_Click"/>
+        <Button x:Name="Gesamtuebersicht" Content="Gesamtuebersicht" HorizontalAlignment="Left" Height="47" Margin="375,290,0,-55" VerticalAlignment="Top" Width="115" Click="Gesamtuebersicht_Click"/>
     </Grid>
 </Window>

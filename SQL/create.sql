@@ -31,7 +31,7 @@ create table Auftrag (
 	Arbeitsart char(2),
 	ErstellungsDatum date,
 	AuftragssummeNetto decimal(25,2),
-	Zahlungsbedienungen varchar(250),
+	Zahlungsbedingungen varchar(250),
 	Abgschlossen bit default 0
 )
 
