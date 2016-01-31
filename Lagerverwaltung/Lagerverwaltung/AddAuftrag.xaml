@@ -22,7 +22,7 @@
                     <TextBox x:Name="Orttextbox" HorizontalAlignment="Left" Height="23" Margin="339,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                     <TextBox x:Name="Strassetextbox" HorizontalAlignment="Left" Height="23" Margin="339,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                     <TextBox x:Name="Bemerkungtextbox" HorizontalAlignment="Left" Height="23" Margin="339,109,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-
+                    <Button x:Name="addBauvorhaben" Content="Bauvorhaben hinzufügen" HorizontalAlignment="Left" Margin="327,207,0,0" VerticalAlignment="Top" Width="145" Height="26" Click="addBauvorhaben_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Auftraggeber">

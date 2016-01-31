@@ -6,7 +6,7 @@ drop table Auftraggeber;
 drop table Bauvorhaben;
 
 create table Bauvorhaben (
-	BauvorhabenNr int primary key,
+	BauvorhabenNr int identity(1,1) primary key,
 	UnternehmenName varchar(200),
 	Art varchar(200),
 	PLZ varchar(6),
@@ -16,7 +16,7 @@ create table Bauvorhaben (
 )
 
 create table Auftraggeber (
-	AuftraggeberNr int primary key,
+	AuftraggeberNr int identity(1,1) primary key,
 	AuftraggeberName varchar(200),
 	PLZ varchar(6),
 	Ort varchar(150),
@@ -24,7 +24,7 @@ create table Auftraggeber (
 )
 
 create table Auftrag (
-	AuftragNummer int primary key,
+	AuftragNummer int identity(1,1) primary key,
 	PL char(2),
 	BauvorhabenNr int references Bauvorhaben,
 	AuftraggeberNr int references Auftraggeber,
